@@ -1,0 +1,44 @@
+@use 'sass:math';
+
+@import '_spacing';
+@import '_breakpoints';
+@import '_border-radius';
+@import '_colors';
+@import '_colors_data_visualization';
+@import '_color_themes';
+@import '_effects';
+@import '_transition';
+@import '_typography';
+@import '_fonts';
+
+// TODO: Find replacements for these
+$color-nordea-grey: rgb(139, 138, 141);
+$color-grey: rgb(158, 158, 158);
+$color-darker-grey: rgb(32, 32, 32);
+
+$font-size-heading-xl: 48px;
+$font-size-heading-l: 40px;
+$font-size-heading-m: 32px;
+$font-size-heading-s: 26px;
+
+$font-size-xxl: 22px;
+$font-size-xl: 18px;
+$font-size-l: 16px;
+$font-size-m: 14px;
+$font-size-s: 12px;
+$font-size-xs: 11px;
+
+$line-height-1: 1;
+$line-height-heading-xl: 56px;
+$line-height-heading-l: 44px;
+$line-height-heading-m: 36px;
+$line-height-heading-s: 32px;
+
+$line-height-xxl: 28px;
+$line-height-xl: 24px;
+$line-height-l: 20px;
+$line-height-m: 18px;
+$line-height-s: 16px;
+$line-height-xs: 12px;
+
+$space-p: 20px;

@@ -1,0 +1,90 @@
+//    Nordea Typography
+//    Created: 5.03.2021
+//
+//    Based on One Foudation Figma Library
+//    The formula assumes that y₀=12 px and n₀=1.
+//    Step starts with 2 and every 3 steps we add another 2.
+//    a(n₀)=y₀+floor((n-1)*(n-2)/3)
+//
+//    12,14,16,18,22,26,30,36,42,48,56,64,72,82,92,102,114,126,138,152,166,180,196,212,228
+//    default line-height: 150% of font-size
+//
+//------------------------------------/
+
+// Font sizes
+//------------------------------------/
+$font-size-small: 0.75rem; //12px | Caption 1
+$font-size-medium: 0.875rem; //14px | Body 2
+$font-size-large: 1rem; //16px | Body 1 / Headline 6
+$font-size-xlarge: 1.125rem; //18px | Headline 5
+$font-size-xxlarge: 1.375rem; //22px | Headline 4
+$font-size-xxxlarge: 1.75rem; //26px | Headline 3
+$font-size-xxxxlarge: 1.875rem; //30px | Headline 2
+$font-size-xxxxxlarge: 2.25rem; //36px | Headline 1
+
+$line-height-small: 1rem; //16px | Caption 1
+$line-height-medium: 1.25rem; //20px | Body 2
+$line-height-large: 1.5rem; //24px | Body 1 / Headline 6
+$line-height-xlarge: 1.625rem; //26px | Headline 5
+$line-height-xxlarge: 1.875rem; //30px | Headline 4
+$line-height-xxxlarge: 2rem; //32px | Headline 3
+$line-height-xxxxlarge: 2.25rem; //36px | Headline 2
+$line-height-xxxxxlarge: 2.75rem; //44px | Headline 1
+
+$fonts: (
+    'font-small',
+    'font-medium',
+    'font-large',
+    'font-xlarge',
+    'font-xxlarge',
+    'font-xxxlarge',
+    'font-xxxxlarge',
+    'font-xxxxxlarge'
+);
+
+$weights: ('light', 'regular', 'medium', 'bold', 'boldest');
+
+@mixin uiw-font-weight($weight) {
+    @if $weight == nth($weights, 1) {
+        font-weight: $font-weight-light;
+    } @else if $weight == nth($weights, 2) {
+        font-weight: $font-weight-regular;
+    } @else if $weight == nth($weights, 3) {
+        font-weight: $font-weight-medium;
+    } @else if $weight == nth($weights, 4) {
+        font-weight: $font-weight-bold;
+    } @else if $weight == nth($weights, 5) {
+        font-weight: $font-weight-boldest;
+    }
+}
+
+@mixin uiw-font($size, $weight) {
+    @if $size == nth($fonts, 1) {
+        font-size: $font-size-small;
+        line-height: $line-height-small;
+    } @else if $size == nth($fonts, 2) {
+        font-size: $font-size-medium;
+        line-height: $line-height-medium;
+    } @else if $size == nth($fonts, 3) {
+        font-size: $font-size-large;
+        line-height: $line-height-large;
+    } @else if $size == nth($fonts, 4) {
+        font-size: $font-size-xlarge;
+        line-height: $line-height-xlarge;
+    } @else if $size == nth($fonts, 5) {
+        font-size: $font-size-xxlarge;
+        line-height: $line-height-xxlarge;
+    } @else if $size == nth($fonts, 6) {
+        font-size: $font-size-xxxlarge;
+        line-height: $line-height-xxxlarge;
+    } @else if $size == nth($fonts, 7) {
+        font-size: $font-size-xxxxlarge;
+        line-height: $line-height-xxxxlarge;
+    } @else if $size == nth($fonts, 8) {
+        font-size: $font-size-xxxxxlarge;
+        line-height: $line-height-xxxxxlarge;
+    }
+
+    // font-weights
+    @include uiw-font-weight($weight);
+}

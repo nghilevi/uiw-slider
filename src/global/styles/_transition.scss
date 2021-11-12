@@ -1,0 +1,28 @@
+//    Animation
+//    Created: 5.03.2021
+//
+//    Based on One Foudation Figma Library
+//------------------------------------/
+
+// Timing
+//------------------------------------/
+$time-fast: 200ms;
+$time-normal: 400ms;
+$time-slow: 600ms;
+
+// Easing
+//------------------------------------/
+$ease-in: cubic-bezier(0.6, 0.04, 0.98, 0.335); //ease-in
+$ease-out: cubic-bezier(0.075, 0.82, 0.165, 1); //ease-out
+$ease-in-out: cubic-bezier(0.075, 0.82, 0.165, 1); //ease-in-out
+
+// Mixins
+//------------------------------------/
+// System reactions
+@mixin transition($time, $easing) {
+    -webkit-transition: all $time $easing;
+    -moz-transition: all $time $easing;
+    -ms-transition: all $time $easing;
+    -o-transition: all $time $easing;
+    transition: all $time $easing;
+}

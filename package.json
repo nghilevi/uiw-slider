@@ -1,0 +1,55 @@
+{
+  "name": "uiw-slider",
+  "version": "0.0.2",
+  "description": "A lightweight, simple-to-use slider allowing users to make selections from a range of values.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/custom-elements/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/custom-elements/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/uiw-slider/uiw-slider.esm.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "dependencies": {
+    "@stencil/core": "^2.7.0"
+  },
+  "devDependencies": {
+    "@stencil/sass": "^1.5.2",
+    "@types/jest": "^26.0.24",
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3",
+    "puppeteer": "^10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinhnghi223/uiw-slider.git"
+  },
+  "author": "Nghi Le",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vinhnghi223/uiw-slider/issues"
+  },
+  "homepage": "https://github.com/vinhnghi223/uiw-slider",
+  "keywords": [
+    "input",
+    "input number",
+    "number input",
+    "quantity input",
+    "scale",
+    "rating",
+    "web component",
+    "stencil","stenciljs",
+    "framework agnostic",
+    "angular","react","vue"
+  ]
+}

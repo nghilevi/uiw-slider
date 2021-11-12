@@ -1,0 +1,136 @@
+//    Nordea Digital Palete Tokens
+//    Created: 5.03.2021
+//
+//    Based on One Foudation Figma Library
+//------------------------------------/
+
+// Grays
+//------------------------------------/
+//------------------------------------/
+// Black
+$color-black: rgb(0, 0, 0);
+$color-black-25: rgba($color-black, 0.25);
+$color-black-50: rgba($color-black, 0.5);
+$color-black-75: rgba($color-black, 0.75);
+
+// Darkest Gray
+$color-darkest-gray: rgb(21, 21, 21);
+$color-darkest-gray-25: rgba($color-darkest-gray, 0.25);
+$color-darkest-gray-50: rgba($color-darkest-gray, 0.5);
+$color-darkest-gray-75: rgba($color-darkest-gray, 0.75);
+
+// Eclipse Gray
+$color-eclipse-gray: rgb(56, 56, 56);
+$color-eclipse-gray-25: rgba($color-eclipse-gray, 0.25);
+$color-eclipse-gray-50: rgba($color-eclipse-gray, 0.5);
+$color-eclipse-gray-75: rgba($color-eclipse-gray, 0.75);
+
+// Dark Gray
+$color-dark-gray: rgb(90, 87, 92);
+$color-dark-gray-25: rgba($color-dark-gray, 0.25);
+$color-dark-gray-50: rgba($color-dark-gray, 0.5);
+$color-dark-gray-75: rgba($color-dark-gray, 0.75);
+
+// Nordea Gray
+$color-nordea-gray: rgba(139, 138, 141);
+$color-nordea-gray-25: rgba($color-nordea-gray, 0.25);
+$color-nordea-gray-50: rgba($color-nordea-gray, 0.5);
+$color-nordea-gray-75: rgba($color-nordea-gray, 0.75);
+
+// Medium Gray
+$color-medium-gray: rgb(201, 199, 199);
+$color-medium-gray-25: rgba($color-medium-gray, 0.25);
+$color-medium-gray-50: rgba($color-medium-gray, 0.5);
+$color-medium-gray-75: rgba($color-medium-gray, 0.75);
+
+// Light Gray
+$color-light-gray: rgb(227, 227, 227);
+$color-light-gray-25: rgba($color-light-gray, 0.25);
+$color-light-gray-50: rgba($color-light-gray, 0.5);
+$color-light-gray-75: rgba($color-light-gray, 0.75);
+
+// Cool Gray
+$color-cool-gray: rgb(241, 242, 244);
+$color-cool-gray-25: rgba($color-cool-gray, 0.25);
+$color-cool-gray-50: rgba($color-cool-gray, 0.5);
+$color-cool-gray-75: rgba($color-cool-gray, 0.75);
+
+// White
+$color-white: rgb(255, 255, 255);
+$color-white-25: rgba($color-white, 0.25);
+$color-white-50: rgba($color-white, 0.5);
+$color-white-75: rgba($color-white, 0.75);
+
+$color-transparent: rgba($color-black, 0);
+
+// Blues
+//------------------------------------/
+//------------------------------------/
+// Deep Blue
+$color-deep-blue: rgb(0, 0, 94);
+$color-deep-blue-25: rgba($color-deep-blue, 0.25);
+$color-deep-blue-50: rgba($color-deep-blue, 0.5);
+$color-deep-blue-75: rgba($color-deep-blue, 0.75);
+
+// Nordea Blue
+$color-nordea-blue: rgb(0, 0, 160);
+$color-nordea-blue-25: rgba($color-nordea-blue, 0.25);
+$color-nordea-blue-50: rgba($color-nordea-blue, 0.5);
+$color-nordea-blue-75: rgba($color-nordea-blue, 0.75);
+
+// Medium Blue
+$color-medium-blue: rgb(131, 184, 237);
+$color-medium-blue-25: rgba($color-medium-blue, 0.25);
+$color-medium-blue-50: rgba($color-medium-blue, 0.5);
+$color-medium-blue-75: rgba($color-medium-blue, 0.75);
+
+// Haas Blue
+$color-haas-blue: rgb(174, 213, 255);
+$color-haas-blue-25: rgba($color-haas-blue, 0.25);
+$color-haas-blue-50: rgba($color-haas-blue, 0.5);
+$color-haas-blue-75: rgba($color-haas-blue, 0.75);
+
+// Cloud Blue
+$color-cloud-blue: rgb(220, 237, 255);
+$color-cloud-blue-25: rgba($color-cloud-blue, 0.25);
+$color-cloud-blue-50: rgba($color-cloud-blue, 0.5);
+$color-cloud-blue-75: rgba($color-cloud-blue, 0.75);
+
+// Accents
+//------------------------------------/
+//------------------------------------/
+// Accent Yellow
+$color-accent-yellow: rgb(255, 225, 131);
+$color-accent-yellow-25: rgba($color-accent-yellow, 0.25);
+$color-accent-yellow-50: rgba($color-accent-yellow, 0.5);
+$color-accent-yellow-75: rgba($color-accent-yellow, 0.75);
+
+// Accent Dark Yellow
+$color-accent-dark-yellow: rgb(255, 207, 61);
+$color-accent-dark-yellow-25: rgba($color-accent-dark-yellow, 0.25);
+$color-accent-dark-yellow-50: rgba($color-accent-dark-yellow, 0.5);
+$color-accent-dark-yellow-75: rgba($color-accent-dark-yellow, 0.75);
+
+// Accent Red
+$color-accent-red: rgb(252, 97, 97);
+$color-accent-red-25: rgba($color-accent-red, 0.25);
+$color-accent-red-50: rgba($color-accent-red, 0.5);
+$color-accent-red-75: rgba($color-accent-red, 0.75);
+
+// Accent Dark Red
+$color-accent-dark-red: rgb(231, 4, 4);
+$color-accent-dark-red-25: rgba($color-accent-dark-red, 0.25);
+$color-accent-dark-red-50: rgba($color-accent-dark-red, 0.5);
+$color-accent-dark-red-75: rgba($color-accent-dark-red, 0.75);
+
+// Accent Green
+$color-accent-green: rgb(37, 182, 110);
+$color-accent-green-25: rgba($color-accent-green, 0.25);
+$color-accent-green-50: rgba($color-accent-green, 0.5);
+$color-accent-green-75: rgba($color-accent-green, 0.75);
+
+// Accent Dark Green
+$color-accent-dark-green: rgb(13, 130, 104);
+$color-accent-dark-green-25: rgba($color-accent-dark-green, 0.25);
+$color-accent-dark-green-50: rgba($color-accent-dark-green, 0.5);
+$color-accent-dark-green-75: rgba($color-accent-dark-green, 0.75);

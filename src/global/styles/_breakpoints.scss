@@ -1,0 +1,13 @@
+/**
+ * Using non-semantic names exceptionally. Here they are better option in my mind, because
+ *  - designers use pixels in their sketches, not e.g. breakpoint-s|m|l
+ *  - changing the pixel amount is breaking change, which should anyhow be done by introducing
+ *      a new variable and deprecating the old one
+ *  - variables still help devs to use the common breakpoints
+ */
+$breakpoint-414: 414px;
+$breakpoint-768: 768px;
+$breakpoint-1024: 1024px;
+$breakpoint-1200: 1200px;
+$breakpoint-1440: 1440px;
+$breakpoint-1920: 1920px;

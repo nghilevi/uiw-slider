@@ -1,0 +1,25 @@
+//    Grid and Spacings
+//    Created: 5.03.2021
+//
+//    Based on One Foudation Figma Library
+//    8px discipline is a rule :D
+//------------------------------------/
+
+// Base building block
+$b8: 8px;
+
+// Spaceing
+//------------------------------------/
+$space-xxs: $b8 * 0.25; //2px
+$space-xs: $b8 * 0.5; //4px
+$space-s: $b8; //8px
+$space-m: $b8 * 1.5; //12px
+$space-l: $b8 * 2; //16px;
+$space-xl: $b8 * 3; //24px;
+$space-xxl: $b8 * 4; //32px;
+$space-xxxl: $b8 * 5; //40px;
+$space-xxxxl: $b8 * 6; //48px;
+
+// Grid
+//------------------------------------/
+$space-grid-gutter: $space-xl;

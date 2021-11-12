@@ -1,0 +1,32 @@
+//    Nordea Color Themes Tokens
+//    Created: 5.03.2021
+//
+//    Based on One Foudation Figma Library
+//------------------------------------/
+
+$themes: (
+    default: (
+        text-primary: $color-black,
+        text-secondary: $color-dark-gray,
+        background-primary: $color-cool-gray,
+        background-secondary: $color-white,
+        icons: $color-deep-blue,
+        focus: $color-nordea-blue,
+        error: $color-accent-dark-red,
+        success: $color-accent-dark-green,
+        warning: $color-accent-dark-yellow,
+        info: $color-cloud-blue,
+    ),
+    dark: (
+        text-primary: $color-white,
+        text-secondary: $color-medium-gray,
+        background-primary: $color-black,
+        background-secondary: $color-darkest-gray,
+        icons: $color-haas-blue,
+        focus: $color-medium-blue,
+        error: $color-accent-red,
+        success: $color-accent-green,
+        warning: $color-accent-yellow,
+        info: $color-eclipse-gray,
+    ),
+);

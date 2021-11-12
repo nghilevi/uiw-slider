@@ -1,0 +1,100 @@
+@import './fonts';
+
+// Paths
+//------------------------------------/
+$nordea-sans-small-path: '../fonts/nordea_sans_small_web';
+$nordea-sans-large-path: '../fonts/nordea_sans_large_web';
+
+// Nordea Sans Small Web
+//------------------------------------/
+@font-face {
+    font-family: 'Nordea Sans';
+    font-weight: $font-weight-boldest;
+    src: url($nordea-sans-small-path + '/NordeaSansSmallWeb-Black.eot')
+            format('eot'),
+        url($nordea-sans-small-path + '/NordeaSansSmallWeb-Black.woff')
+            format('woff');
+}
+
+@font-face {
+    font-family: 'Nordea Sans';
+    font-weight: $font-weight-bold;
+    src: url($nordea-sans-small-path + '/NordeaSansSmallWeb-Bold.eot')
+            format('eot'),
+        url($nordea-sans-small-path + '/NordeaSansSmallWeb-Bold.woff')
+            format('woff');
+}
+
+@font-face {
+    font-family: 'Nordea Sans';
+    font-weight: $font-weight-medium;
+    src: url($nordea-sans-small-path + '/NordeaSansSmallWeb-Medium.eot')
+            format('eot'),
+        url($nordea-sans-small-path + '/NordeaSansSmallWeb-Medium.woff')
+            format('woff');
+}
+
+@font-face {
+    font-family: 'Nordea Sans';
+    font-weight: $font-weight-regular;
+    src: url($nordea-sans-small-path + '/NordeaSansSmallWeb-Regular.eot')
+            format('eot'),
+        url($nordea-sans-small-path + '/NordeaSansSmallWeb-Regular.woff')
+            format('woff');
+}
+
+@font-face {
+    font-family: 'Nordea Sans';
+    font-weight: $font-weight-light;
+    src: url($nordea-sans-small-path + '/NordeaSansSmallWeb-Light.eot')
+            format('eot'),
+        url($nordea-sans-small-path + '/NordeaSansSmallWeb-Light.woff')
+            format('woff');
+}
+
+// Nordea Sans Large Web
+//------------------------------------/
+@font-face {
+    font-family: 'Nordea Sans Large';
+    font-weight: $font-weight-boldest;
+    src: url($nordea-sans-large-path + '/NordeaSansLargeWeb-Black.eot')
+            format('eot'),
+        url($nordea-sans-large-path + '/NordeaSansLargeWeb-Black.woff')
+            format('woff');
+}
+
+@font-face {
+    font-family: 'Nordea Sans Large';
+    font-weight: $font-weight-bold;
+    src: url($nordea-sans-large-path + '/NordeaSansLargeWeb-Bold.eot')
+            format('eot'),
+        url($nordea-sans-large-path + '/NordeaSansLargeWeb-Bold.woff')
+            format('woff');
+}
+
+@font-face {
+    font-family: 'Nordea Sans Large';
+    font-weight: $font-weight-medium;
+    src: url($nordea-sans-large-path + '/NordeaSansLargeWeb-Medium.eot')
+            format('eot'),
+        url($nordea-sans-large-path + '/NordeaSansLargeWeb-Medium.woff')
+            format('woff');
+}
+
+@font-face {
+    font-family: 'Nordea Sans Large';
+    font-weight: $font-weight-regular;
+    src: url($nordea-sans-large-path + '/NordeaSansLargeWeb-Regular.eot')
+            format('eot'),
+        url($nordea-sans-large-path + '/NordeaSansLargeWeb-Regular.woff')
+            format('woff');
+}
+
+@font-face {
+    font-family: 'Nordea Sans Large';
+    font-weight: $font-weight-light;
+    src: url($nordea-sans-large-path + '/NordeaSansLargeWeb-Light.eot')
+            format('eot'),
+        url($nordea-sans-large-path + '/NordeaSansLargeWeb-Light.woff')
+            format('woff');
+}

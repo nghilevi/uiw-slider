@@ -1,0 +1,151 @@
+
+//////////////////////////////////////////
+$slider-bar-height: $space-xs;
+$slider-handle-size: $space-xl;
+
+.uiw-slider {
+    transition: color $time-normal $ease-in-out,
+        box-shadow $time-normal $ease-in-out;
+    color: $color-black;
+
+    // UPPER ROW with LABEL & INPUT
+    &__label-input-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__label-input-block {
+        &--disabled {
+            color: $color-nordea-gray;
+        }
+    }
+
+    &__label {
+        font-size: $font-size-medium;
+        line-height: $line-height-medium;
+        .uiw-slider--error & {
+            color: $color-accent-dark-red;
+        }
+        .uiw-slider--disabled & {
+            color: $color-nordea-gray;
+        }
+    }
+
+    &__sublabel {
+        color: $color-nordea-gray;
+        font-size: $font-size-small;
+        line-height: $line-height-small;
+        .uiw-slider--error & {
+            color: $color-accent-dark-red;
+        }
+    }
+
+    .uiw-input {
+        font-size: $font-size-medium;
+        min-height: 0px;
+        &--disabled {
+            color: $color-nordea-gray;
+        }
+        &__postfix {
+            padding-left: 0px;
+            color: $color-dark-gray;
+        }
+        &__field {
+            // to allow setting of input field width based on min and max.
+            width: var(--uiwSliderInputFieldWidth);
+        }
+        &__field-container {
+            border-radius: $radius-s;
+        }
+    }
+
+    // SLIDER
+    &__slider-container {
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        height: $space-xxl;
+        outline: none;
+        .uiw-slider--disabled & {
+            pointer-events: none;
+        }
+    }
+
+    &__slider-bar {
+        align-items: center;
+        background-color: $color-cloud-blue;
+        border-radius: 100px;
+        display: flex;
+        height: $slider-bar-height;
+        width: 100%;
+
+        .uiw-slider--disabled & {
+            background-color: $color-cool-gray;
+        }
+    }
+
+    &__filling {
+        position: absolute;
+        height: $slider-bar-height;
+        border: none;
+        border-radius: 100px;
+        background-color: $color-nordea-blue;
+        .uiw-slider--disabled & {
+            background-color: $color-medium-gray;
+        }
+    }
+
+    &__handle {
+        position: absolute;
+        border-radius: $radius-rounded;
+        cursor: pointer;
+        height: $slider-handle-size;
+        width: $slider-handle-size;
+        background-color: $color-deep-blue;
+        border: none;
+
+        &:focus-visible {
+            box-shadow: 0 0 0 $space-xxs $color-white,
+                0 0 0 $space-xs $color-deep-blue;
+
+            // to stop width from increasing upon adding box shadows.
+            height: $slider-handle-size - $space-s;
+            width: $slider-handle-size - $space-s;
+
+            // to stop the handle from moving due to size shinkage
+            margin-left: $space-xs;
+            outline: none;
+
+            &:hover {
+                background-color: $color-nordea-blue;
+                box-shadow: 0 0 0 $space-xxs $color-white,
+                    0 0 0 $space-xs $color-nordea-blue;
+            }
+        }
+
+        &:hover {
+            background-color: $color-nordea-blue;
+            box-shadow: 0 0 0 $space-xxs $color-nordea-blue;
+        }
+
+        &:disabled {
+            pointer-events: none;
+            background-color: $color-medium-gray;
+        }
+    }
+
+    &__footer {
+        align-items: center;
+        color: $color-accent-dark-red;
+        display: flex; // for vertical alignment between the text and the icon
+    }
+
+    &__error-text {
+        margin-left: $space-s;
+        font-size: $font-size-medium;
+        line-height: $line-height-medium;
+    }
+}
