@@ -67,12 +67,21 @@ To run the unit tests for the components, run:
 ```bash
 npm test
 ```
-### Known problems/limitations
-input number currently supports only integer values
-it is possible to manually enter fractions (for example 10.9) but the value will be still 10. That said if max value is 10 and user manually enters 10.9 it will not show error about max value
+### Development notes
+The hint is created based on the min and max upon creation. Hence, the example on the top of this page will always show 0-100. To test other scenarios, you can, for instance, add the code above to web-components/src/index.html.
 
-### Honorable mentions
-the width of input field is changing dynamicaly based on lenght of number (max width is to fix the parent container)
+The input field has a width that is set upon load based on the min and max. Since the min and max are supposed to be immutable, the example above will have a input field width for min = 0 and max = 100.
+
+By default, the stepSize is set to 1.
+
+By providing a numerical input that is higher than the maximum value or lower than the minimum value, an error message would appear below the slider.
+
+By default, the stepSize is set to 1.
+
+By providing a numerical input that is higher than the maximum value or lower than the minimum value, an error message would appear below the slider.
+The component allows integers only and does not have any dark mode.
+
+Emptying the fields would set the attributes to empty strings rather than default values. To test the default values, you can, for instance, add the code above to web-components/src/index.html.
 
 ## Support
 
