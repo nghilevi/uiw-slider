@@ -12,7 +12,7 @@ import {
 } from '@stencil/core'
 
 import { bem, bemFromBlock } from '../../global/bem'
-import { NwccBaseInput, NWCC_INPUT_TYPE } from './uiw-base-input'
+import { UiwBaseInput, UIW_INPUT_TYPE } from './uiw-base-input'
 
 import { AsyncValidatorFn, ValidatorFn } from '../../global/errorHandler'
 
@@ -37,7 +37,7 @@ type InputEvent = Event & {
     tag: 'uiw-input',
     styleUrl: 'uiw-input.scss',
 })
-export class NwccInput implements NwccBaseInput {
+export class UiwInput implements UiwBaseInput {
     @Element() el: HTMLElement // host element
 
     @Prop() label!: string
@@ -51,7 +51,7 @@ export class NwccInput implements NwccBaseInput {
     @Prop({ mutable: true }) error: string = ''
     @Prop() note: string = ''
     @Prop() name: string = ''
-    @Prop() type: NWCC_INPUT_TYPE = NWCC_INPUT_TYPE.TEXT
+    @Prop() type: UIW_INPUT_TYPE = UIW_INPUT_TYPE.TEXT
     @Prop() inputmode: string = 'text'
     @Prop() counter: number = 0
     @Prop() disabled: boolean = false
@@ -96,22 +96,22 @@ export class NwccInput implements NwccBaseInput {
         }
     }
 
-    @Event() uiwInputChange: EventEmitter
+
     /**
-     * @deprecated use nwccInputValidate
+     * @deprecated use uiwInputValidate
      */
     @Event() validate: EventEmitter
     /**
-     * @deprecated use nwccInputValidateDebounced
+     * @deprecated use uiwInputValidateDebounced
      */
     @Event() validatedebounced: EventEmitter
 
-    @Event() nwccInputChange: EventEmitter<string>
-    @Event() nwccInputFocus: EventEmitter<FocusEvent>
-    @Event() nwccInputBlur: EventEmitter<string>
-    @Event() nwccInputKeyDown: EventEmitter<KeyboardEvent>
-    @Event() nwccInputValidate: EventEmitter<string>
-    @Event() nwccInputValidateDebounced: EventEmitter<string>
+    @Event() uiwInputChange: EventEmitter<string>
+    @Event() uiwInputFocus: EventEmitter<FocusEvent>
+    @Event() uiwInputBlur: EventEmitter<string>
+    @Event() uiwInputKeyDown: EventEmitter<KeyboardEvent>
+    @Event() uiwInputValidate: EventEmitter<string>
+    @Event() uiwInputValidateDebounced: EventEmitter<string>
 
     @Method()
     async elementRef() {
@@ -120,7 +120,7 @@ export class NwccInput implements NwccBaseInput {
 
     @Listen('keydown')
     handleKeyDown(ev: KeyboardEvent) {
-        this.nwccInputKeyDown.emit(ev)
+        this.uiwInputKeyDown.emit(ev)
     }
 
     private elRef: HTMLInputElement
@@ -138,7 +138,7 @@ export class NwccInput implements NwccBaseInput {
             )
         }
         // Add validator for checking the email address
-        if (this.type === NWCC_INPUT_TYPE.EMAIL) {
+        if (this.type === UIW_INPUT_TYPE.EMAIL) {
             this.maxlength = this.maxlength ?? 320 //Sets the maximum length to 320 characters if the maximum length is not set.
             /**
              * Provided that an email address is provided, the below checks if the provided email address is valid according to
@@ -179,8 +179,8 @@ export class NwccInput implements NwccBaseInput {
 
     private onInput(e: InputEvent) {
         this.updateInputValue(e.target, e.target.value)
-        this.uiwInputChange.emit(e)
-        this.nwccInputChange.emit(this.value)
+        this.uiwInputChange.emit()
+        this.uiwInputChange.emit(this.value)
     }
 
     private updateInputValue(target: HTMLInputElement, value: string) {
@@ -220,13 +220,13 @@ export class NwccInput implements NwccBaseInput {
     }
 
     private onFocusChange(e: FocusEvent) {
-        this.nwccInputFocus.emit(e)
+        this.uiwInputFocus.emit(e)
     }
 
     private onBlurChange() {
         this.validateInline(this.value)
         this.validateAsync(this.value)
-        this.nwccInputBlur.emit(this.value)
+        this.uiwInputBlur.emit(this.value)
     }
 
     private validateInline(value: string) {

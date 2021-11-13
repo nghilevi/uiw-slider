@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { NWCC_INPUT_TYPE } from "./components/uiw-input/uiw-base-input";
+import { UIW_INPUT_TYPE } from "./components/uiw-input/uiw-base-input";
 import { AsyncValidatorFn, ErrorMessage, ValidatorFn } from "./global/errorHandler";
 export namespace Components {
     interface UiwInput {
@@ -40,7 +40,7 @@ export namespace Components {
         required?: string
         invalidEmail?: string
     };
-        "type": NWCC_INPUT_TYPE;
+        "type": UIW_INPUT_TYPE;
         /**
           * There are 2 options to validate, either pass the sync/async validation or listen to changes and update error message Depending on usage we might end up killing passing of error message or validators
          */
@@ -109,19 +109,18 @@ declare namespace LocalJSX {
         "maxlength"?: number;
         "name"?: string;
         "note"?: string;
-        "onNwccInputBlur"?: (event: CustomEvent<string>) => void;
-        "onNwccInputChange"?: (event: CustomEvent<string>) => void;
-        "onNwccInputFocus"?: (event: CustomEvent<FocusEvent>) => void;
-        "onNwccInputKeyDown"?: (event: CustomEvent<KeyboardEvent>) => void;
-        "onNwccInputValidate"?: (event: CustomEvent<string>) => void;
-        "onNwccInputValidateDebounced"?: (event: CustomEvent<string>) => void;
-        "onUiwInputChange"?: (event: CustomEvent<any>) => void;
+        "onUiwInputBlur"?: (event: CustomEvent<string>) => void;
+        "onUiwInputChange"?: (event: CustomEvent<string>) => void;
+        "onUiwInputFocus"?: (event: CustomEvent<FocusEvent>) => void;
+        "onUiwInputKeyDown"?: (event: CustomEvent<KeyboardEvent>) => void;
+        "onUiwInputValidate"?: (event: CustomEvent<string>) => void;
+        "onUiwInputValidateDebounced"?: (event: CustomEvent<string>) => void;
         /**
-          * @deprecated use nwccInputValidate
+          * @deprecated use uiwInputValidate
          */
         "onValidate"?: (event: CustomEvent<any>) => void;
         /**
-          * @deprecated use nwccInputValidateDebounced
+          * @deprecated use uiwInputValidateDebounced
          */
         "onValidatedebounced"?: (event: CustomEvent<any>) => void;
         "placeholder"?: string;
@@ -134,7 +133,7 @@ declare namespace LocalJSX {
         required?: string
         invalidEmail?: string
     };
-        "type"?: NWCC_INPUT_TYPE;
+        "type"?: UIW_INPUT_TYPE;
         /**
           * There are 2 options to validate, either pass the sync/async validation or listen to changes and update error message Depending on usage we might end up killing passing of error message or validators
          */

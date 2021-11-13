@@ -239,7 +239,7 @@ export class UiwSlider {
             ref={(el) => this.inputField = el as HTMLElement}
             class={this.getClassName("uiw-input")}
             label=""
-            onNwccInputChange={this.onInput.bind(this)}
+            onUiwInputChange={this.onInput.bind(this)}
             formatter={(value: string) => this.formatInput(value)}
             value={this.inputString}
             postfix={this.postfix}
